@@ -1,0 +1,1166 @@
+body {
+  font-family: "Kaisei Decol", serif;
+}
+
+// 共通パーツ
+a {
+  color: $cBlack;
+  &:hover {
+    text-decoration: none;
+    color: $cBlack;
+  }
+}
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+.font-sm {
+  font-size: 14px;
+}
+.font-md {
+  font-size: 19px;
+}
+.font-lr {
+  font-size: 20px;
+}
+.font-lg {
+  font-size: 36px;
+}
+.mb-sm {
+  margin-bottom: 30px !important;
+}
+.mb-md {
+  margin-bottom: 50px !important;
+}
+.mb-lg {
+  margin-bottom: 90px !important;
+}
+
+.mt-md {
+  margin-top: 50px;
+}
+.mt-lr {
+  margin-top: 120px;
+}
+.pt-mn {
+  padding-top: 30px;
+}
+.pt-md {
+  padding-top: 50px;
+}
+.pt-lr {
+  padding-top: 120px;
+}
+.pt-lr {
+  padding-top: 170px;
+}
+.pb-sm {
+  padding-bottom: 16px;
+}
+.pb-lg {
+  padding-bottom: 80px !important;
+}
+.le-md {
+  letter-spacing: 0.07em;
+}
+.content-width {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1400px;
+}
+.content-width-sec {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.main-title {
+  @extend .font-lg;
+  color: $cBlack;
+  font-weight: 600;
+  margin-bottom: 0;
+  display: block;
+}
+.sub-title {
+  @extend .font-sm;
+  color: $cSubTitle;
+}
+
+.top {
+  &__ttl {
+    position: relative;
+    text-align: center;
+
+    &-txt {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $cWhite;
+
+      & > p {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__subttl {
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  &__more {
+    text-align: center;
+    position: relative;
+    top: 70px;
+
+    & > a {
+      color: $cBlack;
+      @extend .font-md;
+      border-bottom: 1px solid #000;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+.span {
+  &__ttl {
+    font-size: 25px;
+  }
+}
+
+.main-txt {
+  @extend .font-lr;
+  line-height: 2.75;
+  color: $cBlack;
+  position: relative;
+    z-index: 3;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #000;
+  padding: 20px 0;
+  margin-bottom: 0;
+}
+
+#global-container {
+  overflow: hidden;
+}
+#container {
+  position: relative;
+}
+
+.mobile-menu {
+  &__btn {
+    display: none;
+  }
+}
+
+/*========= LoadingのためのCSS ===============*/
+
+/* Loading背景画面設定　*/
+#splash {
+  /*fixedで全面に固定*/
+position: fixed;
+width: 100%;
+height: 100%;
+z-index: 999;
+background:#fff;
+text-align:center;
+color:#fff;
+}
+
+/* Loading画像中央配置　*/
+#splash_logo {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+/* Loading アイコンの大きさ設定　*/
+#splash_logo img {
+width:260px;
+}
+
+/* fadeUpをするアイコンの動き */
+
+.fadeUp{
+animation-name: fadeUpAnime;
+animation-duration:1.5s;
+animation-fill-mode:forwards;
+opacity: 0;
+}
+
+@keyframes fadeUpAnime{
+from {
+  opacity: 0;
+//   transform: translateY(100px);
+}
+
+to {
+  opacity: 1;
+transform: translateY(0);
+}
+}
+
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-image: url(../images/top/header_bg.jpg);
+  display: flex;
+  align-items: center;
+  z-index: 100;
+
+  // &.triggered {
+  //   background-color: rgba(255, 255, 255, 0.9);
+  //   box-shadow: 10px 0 25px -10px rgba(0, 0, 0, 0.5);
+  // }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @extend .content-width;
+  }
+
+  &__ul {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__li {
+    margin-left: 40px;
+
+    & > a {
+      color: $cBlack;
+      text-decoration: none !important;
+      text-transform: uppercase;
+      font-size: 18px;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+// トップニュース背景
+.news-bg {
+  background-image: url(../images/top/top_bg01.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding-top: 200px;
+
+  &::after {
+    content: "";
+    display: block;
+    padding-top: 20%;
+  }
+
+  &__kyara01 {
+    position: absolute;
+    top: 10%;
+    left: 0%;
+    z-index: 1;
+  }
+  &__kyara02 {
+    position: absolute;
+    top: 70%;
+    right: 0%;
+    z-index: 1;
+  }
+}
+
+
+.top-news {
+  &__panel {
+    width: 32%;
+    border: 6px solid $cBorder;
+    background-color: $cWhite;
+    text-align: center;
+    position: relative;
+
+    &-img {
+      position: absolute;
+      top: -6%;
+      left: 50%;
+      transform: translate(-50%, -10%);
+    }
+
+    &-txt {
+      margin-bottom: 0;
+      padding-top: 30px;
+      position: relative;
+    }
+
+    &-wrap {
+      @extend .content-width-sec;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-top: 30px;
+    }
+
+    &-inside {
+      width: 80%;
+      margin: 0 auto;
+      padding: 30px 0;
+    }
+  }
+}
+
+.txt__des {
+  background-image: url(../images/top/top_bg02.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 100px 0;
+
+  &-content {
+    @extend .main-txt;
+    @extend .content-width-sec;
+    text-align: center;
+
+    & > p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.look {
+  background-image: url(../images/top/top_bg03.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 200px 0 50% 0;
+
+  &__kyara01 {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+  }
+  &__kyara02 {
+    position: absolute;
+    top: 60%;
+    right: 0%;
+    z-index: 1;
+  }
+
+  &__inner {
+    @extend .content-width-sec;
+    text-align: center;
+  }
+
+  &__panel {
+    width: 32%;
+    border: 6px solid $cBorder;
+    background-color: $cWhite;
+    text-align: center;
+    position: relative;
+
+    &-ttl {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &-img {
+      position: absolute;
+      top: -6%;
+      left: 50%;
+      transform: translate(-50%, -10%);
+    }
+
+    &-txt {
+      margin-bottom: 0;
+      padding-top: 30px;
+      position: relative;
+    }
+
+    &-wrap {
+      @extend .content-width-sec;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-top: 30px;
+    }
+
+    &-inside {
+      width: 80%;
+      margin: 0 auto;
+      padding: 30px 0;
+    }
+  }
+}
+
+// 解剖するページ
+.kaibou-top {
+  background-image: url(../images/kaibou/kaibou_bg01.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  margin-top: 80px;
+  padding-bottom: 200px;
+  position: relative;
+
+  &__ttl {
+    padding-top: 60px;
+  }
+
+  &__inner {
+    width: 50%;
+    margin: 30px auto 0;
+    position: relative;
+  }
+
+  &__kyara {
+    position: absolute;
+    bottom: -40%;
+    right: -40%;
+    z-index: 2;
+  }
+
+  &__kumo {
+    position: absolute;
+    bottom: -60%;
+    right: -40%;
+  }
+
+  &-txt {
+    & > p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// 先生紹介ページ
+.teachers01 {
+  background-image: url(../images/kaibou/kaibou_center_bg01.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 70px 0 120px 0;
+  position: relative;
+
+  &__kyara {
+    position: absolute;
+    top: 60px;
+    right: 10%;
+    z-index: 1;
+  }
+}
+.teachers02 {
+  background-image: url(../images/kaibou/kaibou_center_bg02.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 70px 0 120px 0;
+  text-align: center;
+  position: relative;
+
+  &__kyara {
+    position: absolute;
+    top: 60px;
+    left: 10%;
+    z-index: 1;
+  }
+}
+.teacher01 {
+  text-align: center;
+}
+.span {
+  &__br {
+      display: none;
+  }
+}
+.te {
+  &__panel {
+    position: relative;
+    background-color: $cWhite;
+    width: 90%;
+    max-width: 1100px;
+    margin: 50px auto 0;
+    border: 4px solid $cBorder;
+    padding: 80px 70px;
+
+    &-img {
+      position: absolute;
+      top: -25px;
+      left: 50%;
+      transform: translate(-50%, -4%);
+
+      &-under {
+        position: absolute;
+        top: -105px;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+    }
+
+    &-under {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      position: relative;
+
+      &-flex {
+        display: flex;
+        flex-direction: row;
+        margin-top: 50px;
+      }
+      &-txt {
+        width: 55%;
+        text-align: left;
+        margin-right: 30px;
+
+        & > p {
+          margin-bottom: 0;
+        }
+      }
+      &-image {
+        width: 45%;
+      }
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: row;
+
+    .teachers02 .teacher02 .te__panel:nth-child(odd) & {
+      flex-direction: row-reverse;
+    }
+
+    &-left {
+      width: 66%;
+      text-align: left;
+    }
+    &-right {
+      width: 34%;
+
+      &-img {
+       
+        & > img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    &-ttl {
+      border-bottom: 1px solid #000;
+      padding-bottom: 20px;
+      font-size: 22px;
+
+    }
+
+    &-txt {
+      padding-top: 20px;
+      margin-bottom: 0;
+      line-height: 2;
+      width: 95%;
+
+      &:nth-child(2) {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  &__span {
+    font-size: 16px;
+    padding: 0 5px;
+    margin-left: 20px;
+  }
+
+  &__icon {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+
+// 質問集
+.qa {
+  &__ttl {
+    & > h4 {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 0;
+    }
+  }
+
+  &__wrap {
+    border-top: 1px solid #000;
+    padding-top: 35px;
+    margin-top: 40px;
+  }
+
+  &__question {
+    display: flex;
+    align-items: center;
+    margin-bottom: 26px;
+
+    > .qa__des {
+      &-ttl {
+        text-align: left;
+        width: 90%;
+        font-size: 20px;
+      }
+    }
+  }
+  &__answer {
+    display: flex;
+    align-items: flex-start;
+
+    > .qa__des {
+      &-ttl {
+        text-align: left;
+        width: 90%;
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__icon {
+    &-q {
+      font-size: 25px;
+    }
+    &-img {
+      margin-right: 15px;
+    }
+  }
+
+  &__container {
+    margin-left: 20px;
+  }
+}
+
+.arrow {
+  display: inline-block;
+  width: 12px;
+  height: 3px;
+  border-top: solid 4px transparent;
+  border-right: solid 0px transparent;
+  border-bottom: solid 4px transparent;
+  border-left: solid 10px #f58ca3;
+}
+.col-pi {
+  color: #f58ca3;
+}
+
+.bottom {
+  &-bg {
+    background-image: url(../images/kaibou/kaibou_bg03.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 90px 0 800px 0;
+    position: relative;
+
+  }
+
+  &__img {
+    position: relative;
+    z-index: 2;
+
+    &-sp {
+      display: none;
+    }
+  }
+  &__ttl {
+    &-wrap {
+      display: none;
+    }
+  }
+
+  &__kumo01 {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+  }
+  &__kumo02 {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+  }
+  &__kumo03 {
+    position: absolute;
+    bottom: 30%;
+    right: 5%;
+  }
+  &__inner {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__txt {
+    margin-top: 50px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.7;
+    position: relative;
+    z-index: 2;
+  }
+
+ 
+}
+
+// 勝手に旅するページ
+.fo-bg {
+  font-size: 20px;
+  font-weight: bold;
+}
+.fo-md {
+  font-size: 14px;
+}
+.kat {
+  &__bg {
+    background-image: url(../images/katteni/kattenibg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 90px 0 800px 0;
+  }
+
+  &__inner {
+    text-align: center;
+  }
+
+  &__ttl {
+    margin: 50px 0;
+  }
+
+  &__panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    &-wrap {
+      border: 4px solid $cBorder;
+      background-color: $cWhite;
+      position: relative;
+      padding: 36px 42px;
+      box-sizing: border-box;
+    }
+    &-top {
+      position: absolute;
+      top: -25px;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+    &-icon {
+      position: absolute;
+      top: -25px;
+      right: -55px;
+      transform: translate(-50%, 0);
+    }
+    &-inner {
+      width: 90%;
+      max-width: 1100px;
+      margin: 90px auto 0;
+    }
+
+    // キャラ
+    &-kyara01 {
+      position: absolute;
+      bottom: 80%;
+      left: -15%;
+      z-index: 1;
+    }
+    // 雲
+    &-kumo01 {
+      position: absolute;
+      bottom: 74%;
+      left: -15%;
+    }
+    // キャラ
+    &-kyara02 {
+      position: absolute;
+      bottom: 5%;
+      left: -20%;
+      z-index: 1;
+    }
+    // 雲
+    &-kumo02 {
+      position: absolute;
+      bottom: 1%;
+      left: -20%;
+    }
+    // キャラ
+    &-kyara03 {
+      position: absolute;
+      bottom: -9%;
+      right: -13%;
+      z-index: 1;
+    }
+    // 雲
+    &-kumo03 {
+      position: absolute;
+      bottom: 1%;
+      right: -16%;
+    }
+
+    // キャラ
+    &-kyara04 {
+      position: absolute;
+      bottom: 5%;
+      left: -18%;
+      z-index: 1;
+    }
+    // 雲
+    &-kumo04 {
+      position: absolute;
+      bottom: 1%;
+      left: -18%;
+    }
+
+    // キャラ
+    &-kyara05 {
+      position: absolute;
+      bottom: 3%;
+      right: -15%;
+      z-index: 1;
+    }
+    // 雲
+    &-kumo05 {
+      position: absolute;
+      bottom: 1%;
+      right: -16%;
+    }
+
+    // キャラ
+    &-kyara06 {
+      position: absolute;
+      bottom: 5%;
+      left: -18%;
+      z-index: 1;
+    }
+    // 雲
+    &-kumo06 {
+      position: absolute;
+      bottom: 1%;
+      left: -18%;
+    }
+
+    // キャラ
+    &-kyara07 {
+      position: absolute;
+      bottom: 6%;
+      right: -15%;
+      z-index: 1;
+    }
+    // 雲
+    &-kumo07 {
+      position: absolute;
+      bottom: 1%;
+      right: -16%;
+    }
+
+    // キャラ
+    &-kyara08 {
+      position: absolute;
+      bottom: 5%;
+      left: -16%;
+      z-index: 1;
+    }
+    // 雲
+    &-kumo08 {
+      position: absolute;
+      bottom: 1%;
+      left: -18%;
+    }
+
+    // キャラ
+    &-kyara09 {
+      position: absolute;
+      bottom: 6%;
+      right: -15%;
+      z-index: 1;
+    }
+    // 雲
+    &-kumo09 {
+      position: absolute;
+      bottom: 1%;
+      right: -16%;
+    }
+
+    // キャラ
+    &-kyara10 {
+      position: absolute;
+      bottom: 0;
+      left: -16%;
+      z-index: 1;
+    }
+    // 雲
+    &-kumo10 {
+      position: absolute;
+      bottom: 13%;
+      left: -18%;
+    }
+  }
+
+  &__left {
+    width: 55%;
+    margin-right: 30px;
+    &-top {
+      display: flex;
+      justify-content: space-between;
+    }
+    &-bottom {
+      font-family: "Noto Sans JP", sans-serif;
+      margin-top: 20px;
+
+      & > p {
+        margin-bottom: 0;
+        line-height: 1.9;
+      }
+    }
+  }
+  &__right {
+    text-align: center;
+  }
+  &__circle {
+    display: inline-block;
+    position: relative;
+    font-family: "Noto Sans JP", sans-serif;
+
+    &-sec {
+      display: inline-block;
+    }
+  }
+
+  &__inside {
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    width: 100%;
+
+    & > p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// プライバシーポリシー
+.pr {
+  &__bg {
+    background-image: url(../images/privacy/privacy_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 90px 0 600px 0;
+  }
+
+  &__ttl {
+    margin-top: 50px;
+  }
+
+  &__inner {
+    text-align: center;
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    color: #0a194d;
+  }
+
+  &__maintxt {
+    text-align: left;
+    margin-top: 60px;
+    border-bottom: 1px solid #0a194d;
+    padding-bottom: 50px;
+
+    & > p {
+      margin-bottom: 0;
+    }
+  }
+
+  &__txt {
+    text-align: left;
+    margin-bottom: 35px;
+
+    & > p {
+      margin-bottom: 0;
+    }
+
+    &-ttl {
+      font-size: 24px;
+      padding-left: 12px;
+      font-weight: bold;
+      position: relative;
+      text-align: left;
+      margin-bottom: 10px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: 0;
+        width: 6px;
+        height: 25px;
+        background-color: #0a194d;
+      }
+    }
+  }
+
+  &__date {
+    text-align: left;
+    border-top: 1px solid #0a194d;
+    padding-top: 50px;
+    margin-top: 50px;
+  }
+  &__name {
+    text-align: left;
+  }
+}
+
+// エラーページ
+.er {
+  &__bg {
+    background-image: url(../images/privacy/privacy_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 90px 0 600px 0;
+  }
+
+  &__ttl {
+    margin-top: 50px;
+  }
+
+  &__sorry {
+    font-size: 60px;
+  }
+
+  &__inner {
+    text-align: center;
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  &__img {
+    position: relative;
+  }
+
+  &__kyara {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__kumo {
+    position: absolute;
+    bottom: 20%;
+    left: 25%;
+  }
+}
+
+// 新着情報
+.news-archive {
+  padding-top: 120px;
+  position: relative;
+}
+.news-archive__kyara {
+  position: absolute;
+  top: 6%;
+  right: 5%;
+  z-index: 1;
+}
+.kat__left-wrap {
+  border-bottom: 1px solid #000;
+  padding-bottom: 20px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+.kat__time-ttl {
+  font-size: 25px;
+}
+.kat__left-destxt {
+  font-family: "Noto Sans JP", sans-serif;
+  padding-top: 20px;
+}
+#container__news {
+  background-image: url(../images/kaibou/kaibou_center_bg01.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding-bottom: 50%;
+ 
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  &__bg {
+    &-img {
+      & > img {
+        width: 100%;
+      }
+    }
+  }
+
+  &__inner {
+    background-color: #666;
+    text-align: center;
+  }
+
+  &__ul {
+    padding: 0;
+    margin: 20px 0 50px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  &__li {
+    list-style: none;
+    margin-left: 30px;
+
+    & > a {
+      color: $cWhite;
+
+      &:hover {
+        opacity: 0.7;
+        color: $cWhite;
+      }
+    }
+  }
+
+  &__copy {
+    color: $cWhite;
+    padding-bottom: 20px;
+  }
+}
+
+// .houses {
+//   @extend .content-width;
+
+//   &__inner {
+//     display: flex;
+//     flex-direction: row;
+//     flex-wrap: wrap;
+//     justify-content: center;
+//   }
+
+//   &__item {
+//     width: 47%;
+//   }
+// }

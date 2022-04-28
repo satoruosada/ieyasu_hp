@@ -1,0 +1,202 @@
+@media screen and (max-width: 1280px) {
+  .btn {
+    &-circle {
+      width: 255px;
+      padding: 6px 0;
+      margin: 20px auto 0;
+    }
+  }
+
+  .hero {
+    padding-top: 80px;
+
+    &__main {
+      &-ttl {
+        & > img {
+          width: 70%;
+        }
+      }
+    }
+  }
+
+  .kat {
+    &__panel {
+      flex-direction: column;
+
+      &-wrap {
+        padding: 36px 20px;
+      }
+
+      &-kyara01 {
+        left: 0;
+      }
+      &-kumo01 {
+        left: 0;
+      }
+
+      &-kyara02 {
+        left: 0;
+        bottom: 1%;
+      }
+      &-kumo02 {
+        left: 0;
+      }
+
+      &-kyara03 {
+        right: 0;
+        bottom: -5%;
+      }
+      &-kumo03 {
+        right: 0;
+      }
+
+      &-kyara04 {
+        left: 0;
+      }
+      &-kumo04 {
+        left: 0;
+      }
+
+      &-kyara05 {
+        right: 0;
+        bottom: 0%;
+      }
+      &-kumo05 {
+        right: 0;
+      }
+
+      &-kyara06 {
+        left: 0;
+      }
+      &-kumo06 {
+        left: 0;
+      }
+
+      &-kyara07 {
+        right: 0;
+        bottom: 0%;
+      }
+      &-kumo07 {
+        right: 0;
+      }
+
+      &-kyara08 {
+        left: 0;
+      }
+      &-kumo08 {
+        left: 0;
+      }
+
+      &-kyara09 {
+        right: 0;
+        bottom: 0%;
+      }
+      &-kumo09 {
+        right: 0;
+      }
+
+      &-kyara10 {
+        left: 0;
+        bottom: 2%;
+        left: 2%;
+      }
+      &-kumo10 {
+        left: 0;
+      }
+    }
+
+    &__circle {
+      text-align: center;
+    }
+    &__left {
+      margin-right: 0;
+      width: 100%;
+      &-top {
+        flex-direction: column;
+      }
+      &-bottom {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  .kaibou-top {
+    &__kyara {
+      width: 200px;
+    }
+    &__kumo {
+      width: 200px;
+      bottom: -50%;
+    }
+  }
+
+  .bottom {
+    &-bg {
+      padding: 90px 0 500px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  .hero {
+    &__main {
+      &-icon01 {
+        width: 12%;
+      }
+
+      &-kumo01 {
+        width: 80%;
+      }
+
+      &-icon02 {
+        width: 12%;
+      }
+
+      &-person02 {
+        top: 150px;
+      }
+
+      &-kumo02 {
+      }
+
+      &-icon03 {
+        width: 12%;
+        bottom: 17%;
+      }
+
+      &-person03 {
+        z-index: 2;
+      }
+
+      &-kumo03 {
+        width: 80%;
+        z-index: 1;
+        position: relative;
+      }
+
+      &-icon04 {
+        width: 250px;
+        bottom: 10%;
+      }
+
+      &-person04 {
+        top: 260px;
+      }
+
+      &-kumo04 {
+      }
+
+      &-icon05 {
+        width: 12%;
+      }
+
+      &-kumo05 {
+        width: 80%;
+      }
+
+      &-weave {
+        bottom: -130px;
+      }
+    }
+  }
+}

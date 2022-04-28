@@ -1,0 +1,104 @@
+@media screen and (max-width: 480px) {
+  .hero {
+    &__main {
+      &-bg {
+        padding-bottom: 100px;
+
+        &::after {
+          padding-top: 60%;
+        }
+      }
+
+      &-icon01 {
+        width: 19%;
+        bottom: 40%;
+      }
+      &-icon02 {
+        width: 15%;
+        top: -9%;
+        left: 10%;
+      }
+
+      &-person02 {
+        top: 50px;
+      }
+
+      &-icon03 {
+        width: 19%;
+        bottom: 10%;
+      }
+
+      &-person03 {
+        top: 20px;
+      }
+
+      &-icon04 {
+        width: 120px;
+        bottom: -10%;
+      }
+
+      &-person04 {
+        top: 90px;
+      }
+
+      &-icon05 {
+        width: 15%;
+      }
+      &-person05 {
+        top: 20px;
+      }
+
+      &-weave {
+        bottom: -40px;
+      }
+    }
+  }
+
+  .look {
+    padding: 100px 0 120% 0;
+  }
+
+  .top {
+    &__more {
+      top: 40px;
+    }
+  }
+  .txt__des-content {
+    font-size: 16px;
+  }
+  .main-txt {
+    font-size: 16px;
+  }
+  .header {
+    &__inner {
+      width: 95%;
+    }
+  }
+  .logo {
+    margin-bottom: 15px;
+  }
+  .bottom {
+    &__kumo01 {
+      width: 30%;
+    }
+    &__kumo02 {
+        width: 30%;
+    }
+    &__kumo03 {
+        width: 30%;
+    }
+  }
+  .kat {
+      &__circle {
+        width: 75%;
+        margin: 0 auto;
+      }
+  }
+  .btn-circle {
+      width: 75%;
+  }
+
+  .news-archive__kyara {
+    display: none;
+  }
+}

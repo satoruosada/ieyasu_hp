@@ -1,0 +1,85 @@
+$pattern: (
+  "up": translateY(30px),
+  "down": translateY(-16px),
+  "left": translateX(40px),
+  "right": translateX(-40px),
+);
+
+@each $key, $value in $pattern {
+  .appear.#{$key} {
+    & .item {
+      transform: $value;
+    }
+    & .item02 {
+      transform: $value;
+    }
+    & .item03 {
+      transform: $value;
+    }
+    & .item04 {
+      transform: $value;
+    }
+  }
+}
+
+.appear {
+  & .item {
+    transition: all 1.8s;
+    opacity: 0;
+  }
+  & .item02 {
+    transition: all 2.2s;
+    opacity: 0;
+  }
+  & .item03 {
+    transition: all 2.6s;
+    opacity: 0;
+  }
+  & .item04 {
+    transition: all 2.8s;
+    opacity: 0;
+  }
+
+  &.inview {
+    & .item {
+      opacity: 1;
+      transform: none;
+
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+          transition-delay: $i * 0.4s;
+        }
+      }
+    }
+    & .item02 {
+      opacity: 1;
+      transform: none;
+
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+          transition-delay: $i * 1s;
+        }
+      }
+    }
+    & .item03 {
+      opacity: 1;
+      transform: none;
+
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+          transition-delay: $i * 1.4s;
+        }
+      }
+    }
+    & .item04 {
+      opacity: 1;
+      transform: none;
+
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+          transition-delay: $i * 1.8s;
+        }
+      }
+    }
+  }
+}

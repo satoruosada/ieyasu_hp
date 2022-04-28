@@ -1,0 +1,169 @@
+@media screen and (max-width: 960px) {
+  .mobile-menu {
+    &__btn {
+      display: block;
+    }
+  }
+
+  .header {
+    &__nav {
+      display: none;
+    }
+  }
+
+  .hero {
+    &__main {
+      &-bg {
+        padding-bottom: 100px;
+      }
+
+      &-ttl {
+        z-index: 2;
+
+        & > img {
+          width: 60%;
+        }
+      }
+
+      &-person02 {
+        top: 100px;
+      }
+
+      &-icon03 {
+        bottom: 20%;
+      }
+
+      &-icon04 {
+        width: 150px;
+        bottom: 20%;
+      }
+
+      &-person04 {
+        top: 160px;
+      }
+      &-person05 {
+        top: 40px;
+      }
+
+      &-weave {
+        bottom: -80px;
+      }
+    }
+  }
+
+  .news-bg {
+    padding-top: 100px;
+
+    &__kyara01 {
+      display: none;
+    }
+    &__kyara02 {
+      display: none;
+    }
+  }
+  .top-news {
+    &__panel {
+      width: 100%;
+      margin-bottom: 60px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &-wrap {
+        flex-direction: column;
+      }
+    }
+  }
+  .look {
+    padding: 100px 0 70% 0;
+
+    &__kyara01 {
+      display: none;
+    }
+    &__kyara02 {
+      display: none;
+    }
+
+    &__panel {
+      width: 100%;
+      margin-bottom: 60px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &-wrap {
+        flex-direction: column;
+      }
+    }
+  }
+
+  .main-txt {
+    line-height: 2;
+  }
+
+  .kaibou-top {
+    &__inner {
+      width: 80%;
+    }
+    &__kyara {
+      right: -10%;
+      bottom: -55%;
+    }
+    &__kumo {
+      right: -10%;
+      bottom: -60%;
+    }
+  }
+
+  .te {
+
+    &__panel {
+      padding: 60px 20px;
+
+      &-under {
+        &-flex {
+          flex-direction: column;
+        }
+
+        &-txt {
+          width: 100%;
+          margin-right: 0;
+          margin-bottom: 30px;
+        }
+
+        &-image {
+          width: 80%;
+          margin: 0 auto;
+        }
+      }
+    }
+    &__card {
+      display: flex;
+      flex-direction: column;
+
+      .teachers02 .teacher02 .te__panel:nth-child(odd) & {
+        flex-direction: column;
+      }
+
+      &-left {
+        width: 100%;
+      }
+
+      &-right {
+        width: 60%;
+        margin: 40px auto 0;
+      }
+    }
+  }
+
+  .bottom {
+    &__inner {
+      width: 90%;
+    }
+  }
+
+  .kat {
+    &__bg {
+      padding: 90px 0 600px 0;
+  }
+  }
+}
